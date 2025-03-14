@@ -6,7 +6,7 @@ interface CartItem {
   name: string;
   price: number;
   description: string;
-  quantity: number;
+  sayi: number;
  
 }
 
@@ -24,15 +24,15 @@ const useStore = create<CartStore>((set) => ({
     if (existingItem) {
       return { cart: state.cart.map((cartItem) =>
         cartItem.id === item.id
-          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          ? { ...cartItem, sayi: cartItem.sayi + 1 }
           : cartItem
       )};
     }
-    return { cart: [...state.cart, { ...item, quantity: 1 }] };
+    return { cart: [...state.cart, { ...item, sayi: 1 }] };
   }),
   
   getTotal: () => {
-    return (state) => state.cart.reduce((total, item) => total + item.price * item.quantity);
+    return (state) => state.cart.reduce((total, item) => total + item.price * item.sayi);
   }
 }));
 

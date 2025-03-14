@@ -11,9 +11,7 @@ const Cart: React.FC = () => {
     <div className="cart-page">
       <h1>Your Cart</h1>
       
-      {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
+     
         <div>
   
           {cart.map((item) => (
@@ -21,7 +19,7 @@ const Cart: React.FC = () => {
               <div>
                 <h3>{item.name}</h3>
                 <p className='pp'>Price: ${item.price}</p>
-                <p className='pp'>Quantity: {item.quantity}</p>
+                <p className='pp'>Sayi ${item.sayi}</p>
               </div>
             </div>
           ))}
@@ -31,7 +29,7 @@ const Cart: React.FC = () => {
             <h3>Total: ${getTotal()}</h3>
           </div>
         </div>
-      )}
+     
     </div>
   );
 };

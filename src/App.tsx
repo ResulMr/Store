@@ -9,8 +9,8 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />  // Home page route
-        <Route path="/cart" element={<Cart />} />  // Cart page route
+        <Route path="/" element={<Home />} />  
+        <Route path="/cart" element={<Cart />} />  
       </Routes>
     </Router>
   );
