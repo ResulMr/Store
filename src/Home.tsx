@@ -21,7 +21,7 @@ const items = [
 
 const Home: React.FC = () => {
   const addToCart = useStore((state) => state.addToCart);  
-  const getTotal = useStore((state) => state.getTotal);  
+ 
 
   const handleAddToCart = (item: { id: number; name: string; price: number; description: string }) => {
     addToCart(item);  
@@ -41,11 +41,7 @@ const Home: React.FC = () => {
         ))}
       </div>
 
-   
-      <div className="total-price">
-        <h3>Total: ${getTotal()}</h3>
-      </div>
-
+ 
 
       <Link to="/cart">
         <button className="go-to-cart-button">Go to Cart</button>

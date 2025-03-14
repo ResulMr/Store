@@ -69,11 +69,6 @@ button:hover {
 }
 
 
-.total-price {
-  margin-top: 20px;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
 
 
 .cart-page {
@@ -107,4 +102,8 @@ button:hover {
 
 .cart-summary h3 {
   margin: 5px 0;
+}
+
+.go-to-cart-button{
+  margin-top: 15px;
 }

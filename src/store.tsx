@@ -13,7 +13,7 @@ interface CartItem {
 interface CartStore {
   cart: CartItem[];
   addToCart: (item: CartItem) => void;
-  getTotal: () => number;  
+  
   
 }
 
@@ -31,9 +31,8 @@ const useStore = create<CartStore>((set) => ({
     return { cart: [...state.cart, { ...item, sayi: 1 }] };
   }),
   
-  getTotal: () => {
-    return (state) => state.cart.reduce((total, item) => total + item.price * item.sayi);
-  }
+ 
+  
 }));
 
 export default useStore;
