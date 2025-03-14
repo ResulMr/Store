@@ -19,7 +19,7 @@ const Cart: React.FC = () => {
               <div>
                 <h3>{item.name}</h3>
                 <p className='pp'>Price: ${item.price}</p>
-                <p className='pp'>Sayi ${item.sayi}</p>
+                <p className='pp'>Sayi {item.sayi}</p>
               </div>
             </div>
           ))}
